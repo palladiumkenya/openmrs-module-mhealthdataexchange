@@ -15,6 +15,8 @@ import org.openmrs.api.OpenmrsService;
 import org.openmrs.module.mhealthdataexchange.MhealthdataexchangeConfig;
 import org.openmrs.module.mhealthdataexchange.Item;
 import org.springframework.transaction.annotation.Transactional;
+import org.openmrs.Patient;
+import org.openmrs.api.OpenmrsService;
 
 /**
  * The main service of this module, which is exposed for other modules. See
