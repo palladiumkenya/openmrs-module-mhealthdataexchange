@@ -21,6 +21,10 @@
 			<column name="message_id" type="int" autoIncrement="true">
 				<constraints primaryKey="true" nullable="false"/>
 			</column>
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="message_id" type="int"></column>
             <column name="uuid" type="varchar(38)"></column>
             <column name="patient" type="text"></column>
             <column name="message" type="text"></column>

@@ -1,15 +1,23 @@
-package org.openmrs.module.mhealthdataexchange;
+package org.openmrs.module.mhealthdataexchange.model;
 
-import org.openmrs.BaseOpenmrsMetadata;
+import org.openmrs.BaseOpenmrsData;
 
 import java.io.Serializable;
 
+import org.openmrs.BaseOpenmrsMetadata;
+import org.openmrs.BaseOpenmrsObject;
+
+import java.io.Serializable;
 /**
- * @author Cynthia Kamau
- *         Created on 21/07/2022.
+ * It is a model class. It should extend either {@link BaseOpenmrsObject} or
+ * {@link BaseOpenmrsMetadata}.
  */
-public class MhealthdataexchangeMhealthMessage extends BaseOpenmrsMetadata implements Serializable {
+
+public class MhealthdataexchangeMhealthMessage extends BaseOpenmrsData implements Serializable {
     private static final long serialVersionUID = 3062136520728193223L;
+    public final static String MODULE_PRIVILEGE = "Messages Privilege";
+    private Integer id;
+    private String uuid;
     private Integer message_id;
     private Integer message_type;
     private String hl7_type;
@@ -20,6 +28,25 @@ public class MhealthdataexchangeMhealthMessage extends BaseOpenmrsMetadata imple
     private String internal_message_type;
     private String response;
     private String attempts;
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getUuid() {
+        return uuid;
+    }
+
+    @Override
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
 
     public Integer getMessage_id() {
         return message_id;
@@ -101,4 +128,3 @@ public class MhealthdataexchangeMhealthMessage extends BaseOpenmrsMetadata imple
         this.attempts = attempts;
     }
 }
-
