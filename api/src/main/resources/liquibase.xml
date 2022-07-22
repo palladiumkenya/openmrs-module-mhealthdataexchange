@@ -17,31 +17,22 @@
 		<comment>
 			Creating table for mhealth_message
 		</comment>
-		<createTable tableName="mhealth_message">
-			<column name="message_id" type="int" autoIncrement="true">
-				<constraints primaryKey="true" nullable="false"/>
-			</column>
+		<createTable tableName="mhealthdataexchange_outgoing_message">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="message_id" type="int"></column>
-            <column name="uuid" type="varchar(38)"></column>
             <column name="patient" type="text"></column>
             <column name="message" type="text"></column>
-            <column name="message_type" type="int"></column>
+            <column name="message_type" type="varchar(100)"></column>
             <column name="hl7_type" type="varchar(20)"></column>
-            <column name="status" type="varchar(100)" defaultValue="Success" ></column>
+            <column name="status" type="varchar(100)" ></column>
             <column name="response" type="text"></column>
             <column name="attempts" type="int"></column>
-            <column name="internal_message_type" type="int"></column>
-            <column name="creator" type="int"></column>
             <column name="retired" type="int"></column>
             <column name="source" type="varchar(50)" ></column>
             <column name="date_created" type="datetime"></column>
+            <column name="last_updated_date" type="datetime"></column>
 		</createTable>
-        <modifySql dbms="mysql">
-            <append value="ENGINE=INNODB CHARSET=UTF8 COLLATE utf8_unicode_ci"/>
-        </modifySql>
     </changeSet>
  
 </databaseChangeLog>

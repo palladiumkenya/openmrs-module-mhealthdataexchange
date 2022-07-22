@@ -10,10 +10,9 @@ import org.openmrs.api.impl.BaseOpenmrsService;
 //import org.openmrs.module.afyastat.model.RegistrationInfo;
 
 import java.util.List;
+
 /**
  * It is a default implementation of
- *
  * {@link org.openmrs.module.mhealthdataexchange.api.MhealthdataexchangeMhealthMessageService}.
  */
-public class MhealthdataexchangeMhealthMessageServiceImpl {
-}
+public class MhealthdataexchangeMhealthMessageServiceImpl {}

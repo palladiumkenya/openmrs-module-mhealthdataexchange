@@ -23,7 +23,7 @@ public class MhealthdataexchangeMessage extends BaseOpenmrsMetadata implements S
 		this.id = id;
 	}
 	
-	private Integer message_type;
+	private String message_type;
 	
 	private String hl7_type;
 	
@@ -34,8 +34,6 @@ public class MhealthdataexchangeMessage extends BaseOpenmrsMetadata implements S
 	private String message;
 	
 	private String patient;
-	
-	private String internal_message_type;
 	
 	private String response;
 	
@@ -49,11 +47,11 @@ public class MhealthdataexchangeMessage extends BaseOpenmrsMetadata implements S
 		this.message_id = message_id;
 	}
 	
-	public Integer getMessage_type() {
+	public String getMessage_type() {
 		return message_type;
 	}
 	
-	public void setMessage_type(Integer message_type) {
+	public void setMessage_type(String message_type) {
 		this.message_type = message_type;
 	}
 	
@@ -95,14 +93,6 @@ public class MhealthdataexchangeMessage extends BaseOpenmrsMetadata implements S
 	
 	public void setPatient(String patient) {
 		this.patient = patient;
-	}
-	
-	public String getInternal_message_type() {
-		return internal_message_type;
-	}
-	
-	public void setInternal_message_type(String internal_message_type) {
-		this.internal_message_type = internal_message_type;
 	}
 	
 	public String getResponse() {
