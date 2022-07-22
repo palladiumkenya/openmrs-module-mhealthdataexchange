@@ -11,27 +11,21 @@
  * <p>
  * Copyright (C) OpenMRS, LLC.  All Rights Reserved.
  */
-package org.openmrs.module.mhealthdataexchange.api.db;
+package org.openmrs.module.mhealthdataexchange.api.db.hibernate;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
-import org.openmrs.GlobalProperty;
-import org.openmrs.Patient;
-import org.openmrs.api.context.Context;
+import org.openmrs.module.mhealthdataexchange.Item;
 import org.openmrs.module.mhealthdataexchange.api.db.MhealthdataexchangeDao;
 import org.openmrs.module.mhealthdataexchange.models.MhealthdataexchangeMessage;
-import org.openmrs.module.mhealthdataexchange.Item;
-import org.hibernate.criterion.Restrictions;
-import org.openmrs.api.db.hibernate.DbSession;
-import org.openmrs.api.db.hibernate.DbSessionFactory;
 
 import java.util.List;
 
 /**
- * It is a default implementation of {@link KenyaEMRILDAO}.
+ * It is a default implementation of {@link MhealthdataexchangeDao}.
  */
 public class HibernateMhealthdataexchangeDAO implements MhealthdataexchangeDao {
 	

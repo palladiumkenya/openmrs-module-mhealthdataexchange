@@ -12,11 +12,12 @@ package org.openmrs.module.mhealthdataexchange.api;
 import org.openmrs.annotation.Authorized;
 import org.openmrs.api.APIException;
 import org.openmrs.api.OpenmrsService;
-import org.openmrs.module.mhealthdataexchange.MhealthdataexchangeConfig;
 import org.openmrs.module.mhealthdataexchange.Item;
+import org.openmrs.module.mhealthdataexchange.MhealthdataexchangeConfig;
+import org.openmrs.module.mhealthdataexchange.models.MhealthdataexchangeMessage;
 import org.springframework.transaction.annotation.Transactional;
-import org.openmrs.Patient;
-import org.openmrs.api.OpenmrsService;
+
+import java.util.List;
 
 /**
  * The main service of this module, which is exposed for other modules. See
@@ -44,7 +45,10 @@ public interface MhealthdataexchangeService extends OpenmrsService {
 	 * @return
 	 * @throws APIException
 	 */
+	
 	@Authorized(MhealthdataexchangeConfig.MODULE_PRIVILEGE)
 	@Transactional
 	Item saveItem(Item item) throws APIException;
+	
+	public List<MhealthdataexchangeMessage> getAllMhealthdataexchangeMessages(Boolean includeRetired);
 }
