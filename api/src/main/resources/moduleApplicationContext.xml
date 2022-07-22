@@ -68,7 +68,7 @@
                     <property name="target">
                         <bean class="org.openmrs.module.mhealthdataexchange.api.impl.MhealthdataexchangeServiceImpl">
                             <property name="dao">
-                                <bean class="org.openmrs.module.mhealthdataexchange.api.db.HibernateMhealthdataexchangeDAO">
+                                <bean class="org.openmrs.module.mhealthdataexchange.api.db.hibernate.HibernateMhealthdataexchangeDAO">
                                     <property name="sessionFactory">
                                         <ref bean="sessionFactory" />
                                     </property>

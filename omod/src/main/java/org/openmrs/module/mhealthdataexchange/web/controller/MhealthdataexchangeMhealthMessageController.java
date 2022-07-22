@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 'module/${rootArtifactid}/${rootArtifactid}Link.form'.
  */
 
-@Controller("${rootrootArtifactid}.MhealthdataexchangeMhealthMessageController")
-@RequestMapping(value = "module/${rootArtifactid}/${rootArtifactid}.form")
+@Controller("mhealthdataexchange.MhealthdataexchangeMhealthMessageController")
+@RequestMapping(value = "module/mhealthdataexchange/mhealthdataexchangemessage.form")
 public class MhealthdataexchangeMhealthMessageController {
 	
 	/** Logger for this class and subclasses */
