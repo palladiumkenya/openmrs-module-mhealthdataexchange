@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.mhealthdataexchange.api.dao;
+package org.openmrs.module.mhealthdataexchange.api.db;
 
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.api.db.hibernate.DbSession;
@@ -15,23 +15,15 @@ import org.openmrs.api.db.hibernate.DbSessionFactory;
 import org.openmrs.module.mhealthdataexchange.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.openmrs.module.mhealthdataexchange.models.MhealthdataexchangeMessage;
+import java.util.List;
+import java.util.ArrayList;
 
-@Repository("mhealthdataexchange.MhealthdataexchangeDao")
-public class MhealthdataexchangeDao {
+public interface MhealthdataexchangeDao {
 	
-	@Autowired
-	DbSessionFactory sessionFactory;
+	public Item getItemByUuid(String uuid);
 	
-	private DbSession getSession() {
-		return sessionFactory.getCurrentSession();
-	}
+	public Item saveItem(Item item);
 	
-	public Item getItemByUuid(String uuid) {
-		return (Item) getSession().createCriteria(Item.class).add(Restrictions.eq("uuid", uuid)).uniqueResult();
-	}
-	
-	public Item saveItem(Item item) {
-		getSession().saveOrUpdate(item);
-		return item;
-	}
+	public List<MhealthdataexchangeMessage> getAllMhealthdataexchangeMessages(Boolean includeRetired);
 }

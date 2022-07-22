@@ -17,7 +17,7 @@ import org.mockito.MockitoAnnotations;
 import org.openmrs.User;
 import org.openmrs.api.UserService;
 import org.openmrs.module.mhealthdataexchange.Item;
-import org.openmrs.module.mhealthdataexchange.api.dao.MhealthdataexchangeDao;
+import org.openmrs.module.mhealthdataexchange.api.db.MhealthdataexchangeDao;
 import org.openmrs.module.mhealthdataexchange.api.impl.MhealthdataexchangeServiceImpl;
 import static org.mockito.Mockito.*;
 import static org.hamcrest.Matchers.*;
