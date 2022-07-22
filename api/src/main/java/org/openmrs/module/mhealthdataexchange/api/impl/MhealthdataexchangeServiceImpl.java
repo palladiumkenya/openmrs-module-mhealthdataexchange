@@ -14,7 +14,7 @@ import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.mhealthdataexchange.Item;
 import org.openmrs.module.mhealthdataexchange.api.MhealthdataexchangeService;
-import org.openmrs.module.mhealthdataexchange.api.dao.MhealthdataexchangeDao;
+import org.openmrs.module.mhealthdataexchange.api.db.MhealthdataexchangeDao;
 
 public class MhealthdataexchangeServiceImpl extends BaseOpenmrsService implements MhealthdataexchangeService {
 	
