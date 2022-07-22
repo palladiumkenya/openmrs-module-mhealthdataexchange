@@ -3,7 +3,7 @@ package org.openmrs.module.mhealthdataexchange.api;
 import org.openmrs.annotation.Authorized;
 import org.openmrs.api.APIException;
 import org.openmrs.api.OpenmrsService;
-import org.openmrs.module.mhealthdataexchange.model.MhealthdataexchangeMhealthMessage;
+import org.openmrs.module.mhealthdataexchange.models.MhealthdataexchangeMhealthMessage;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

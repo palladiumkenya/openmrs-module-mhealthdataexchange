@@ -1,4 +1,4 @@
-package org.openmrs.module.mhealthdataexchange.model;
+package org.openmrs.module.mhealthdataexchange.models;
 
 import org.openmrs.BaseOpenmrsData;
 
@@ -7,7 +7,6 @@ import java.io.Serializable;
 import org.openmrs.BaseOpenmrsMetadata;
 import org.openmrs.BaseOpenmrsObject;
 
-import java.io.Serializable;
 /**
  * It is a model class. It should extend either {@link BaseOpenmrsObject} or
  * {@link BaseOpenmrsMetadata}.
