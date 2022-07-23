@@ -15,6 +15,9 @@ import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.mhealthdataexchange.Item;
 import org.openmrs.module.mhealthdataexchange.api.MhealthdataexchangeService;
 import org.openmrs.module.mhealthdataexchange.api.db.MhealthdataexchangeDao;
+import org.openmrs.module.mhealthdataexchange.models.MhealthdataexchangeMessage;
+
+import java.util.List;
 
 public class MhealthdataexchangeServiceImpl extends BaseOpenmrsService implements MhealthdataexchangeService {
 	
@@ -48,5 +51,10 @@ public class MhealthdataexchangeServiceImpl extends BaseOpenmrsService implement
 		}
 		
 		return dao.saveItem(item);
+	}
+	
+	@Override
+	public List<MhealthdataexchangeMessage> getAllMhealthdataexchangeMessages(Boolean includeRetired) {
+		return dao.getAllMhealthdataexchangeMessages(includeRetired);
 	}
 }
